@@ -12,6 +12,20 @@ st.title("🔋 Battery Discharge Test Analysis")
 
 st.write("This tool helps determine the health and standby status of a battery bank based on test parameters.")
 
+options = {
+    "0 minutes": 0.0,
+    "30 minutes": 0.5,
+    "1 hour": 1.0,
+    "1 hour 30 minutes": 1.5,
+    "2 hours": 2.0,
+    "2 hours 30 minutes": 2.5,
+    "3 hours": 3.0,
+    "3 hours 30 minutes": 3.5,
+    "4 hours": 4.0,
+    "4 hours 30 minutes": 4.5,
+    "5 hours": 5.0
+}
+
 # --- User Inputs ---
 durations = [i * 0.5 for i in range(0, 11)]  # 0 to 5 in 0.5 increments
 a1 = st.selectbox("Actual Discharge Duration (Hours)", durations)
