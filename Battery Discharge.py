@@ -13,7 +13,8 @@ st.title("🔋 Battery Discharge Test Analysis")
 st.write("This tool helps determine the health and standby status of a battery bank based on test parameters.")
 
 # --- User Inputs ---
-a1 = st.number_input("Actual Discharge Duration (Hours)", min_value=0.0, step=0.1)
+durations = [i * 0.5 for i in range(0, 11)]  # 0 to 5 in 0.5 increments
+a1 = st.selectbox("Actual Discharge Duration (Hours)", durations)
 a2 = st.number_input("Rated Battery Capacity (Ah)", min_value=0.0, step=0.1)
 a3 = st.number_input("Load Current per Charger (A)", min_value=0.0, step=0.1)
 
